@@ -1,14 +1,21 @@
-from fastapi import FastAPI, Body, Depends, HTTPException, status
-import shutil
-from hmac import compare_digest
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from typing import Optional
-import subprocess
-from git import Repo
-from pathlib import Path
 import os
-import composer
+import shutil
+import subprocess
 from contextlib import asynccontextmanager
+from hmac import compare_digest
+from pathlib import Path
+from typing import Optional
+
+from fastapi import Body
+from fastapi import Depends
+from fastapi import FastAPI
+from fastapi import HTTPException
+from fastapi import status
+from fastapi.security import HTTPAuthorizationCredentials
+from fastapi.security import HTTPBearer
+from git import Repo
+
+import composer
 
 description = """
 This Application handles container & instance creation for the CTF Citadel Platform

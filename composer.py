@@ -1,8 +1,8 @@
+import json
+import shutil
+import socket
 import subprocess
 import uuid
-import shutil
-import json
-import socket
 
 async def spawn_challenge(challenge, environment_variables=None):
     """
